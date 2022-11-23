@@ -1,6 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+# https://huggingface.co/IlyaGusev/rugpt3medium_sum_gazeta
 model_name = "IlyaGusev/rugpt3medium_sum_gazeta"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
