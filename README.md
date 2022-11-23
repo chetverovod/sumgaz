@@ -16,20 +16,20 @@ $ conda activate py37
 ```
 $ conda deactivate
 ```
-### Install torch
+## Install torch
 ```
 $ conda activate py37
-does not works:$ sudo pip install torch
-does not works:$ conda install torch
+does not works: $ sudo pip install torch
+does not works: $ conda install torch
 $ pip install torchvision 
 ```
 
-### Install transformers
+## Install transformers
 ```
 $ pip install transformers
 ```
 
-### Run application
+## Run application
 ```
 $ python  sumgaz.py 
 ```

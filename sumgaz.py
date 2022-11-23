@@ -1,6 +1,10 @@
+#!/usr/bin/python3 
+
+print('Starting...')
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+print('Processing...')
 # https://huggingface.co/IlyaGusev/rugpt3medium_sum_gazeta
 model_name = "IlyaGusev/rugpt3medium_sum_gazeta"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -29,4 +33,7 @@ output_ids = model.generate(
 summary = tokenizer.decode(output_ids[0], skip_special_tokens=False)
 summary = summary.split(tokenizer.sep_token)[1]
 summary = summary.split(tokenizer.eos_token)[0]
-print(summary)
+
+print('Input text:\n', article_text )
+print()
+print('Summary:\n', summary)
